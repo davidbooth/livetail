@@ -1,0 +1,33 @@
+<style type="text/css">
+
+*,html,body{
+    font-family: sans-serif;
+    font-weight: 300;
+    color:#000;
+}
+
+#data{
+    padding: 15px;
+    background-color: lightgrey;
+    height:80%;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+</style>
+<div id="data"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://localhost');
+  socket.on('newData', function (data) {
+    
+    var div = document.getElementById('data');
+    data = data.replace(/\n/g, '<br />');
+    div.innerHTML += data;
+
+    div.scrollTop = div.scrollHeight;
+
+  });
+</script>
+
