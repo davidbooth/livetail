@@ -14,10 +14,13 @@ function livetail(watchFile){
   events.EventEmitter.call(this);
   file = watchFile;
 
-  fs.watch(file, function(event, filename){
-      readFile();
+  //Check if file exists then start watching.
+  fs.exists(file, function(exists){
+    if(!exists){throw new Error("File doesn't exist!")}
+    fs.watch(file, function(event, filename){
+        readFile();
+    });
   });
-
 }
 
 livetail.prototype.__proto__ = events.EventEmitter.prototype;
