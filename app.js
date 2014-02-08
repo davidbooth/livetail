@@ -7,7 +7,7 @@ var fs   = require("fs"),
 
 
 //Init livetail 
-var livetail = require("./livetail").livetail;
+var livetail = require("livetail").livetail;
 var tail = new livetail('testfile.txt');
 
 tail.on('data',function(data){

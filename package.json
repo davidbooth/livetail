@@ -1,0 +1,28 @@
+{
+  "name": "livetail",
+  "version": "0.0.0",
+  "description": "Node.js implementation for tailing a file. Like tail -f",
+  "main": "livetail.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidbooth/livetail.git"
+  },
+  "keywords": [
+    "livetail",
+    "tail",
+    "webtail",
+    "streaming",
+    "tail",
+    "tailing",
+    "a",
+    "file"
+  ],
+  "author": "dabo",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/davidbooth/livetail/issues"
+  }
+}
