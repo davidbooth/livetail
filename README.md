@@ -15,3 +15,5 @@ tail.on('data',function(data){
   console.log(data);
 });
 ```
+#Live Streaming Log with Socket.io Example:
+Checkout the example folder.
